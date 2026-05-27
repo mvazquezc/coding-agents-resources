@@ -1,0 +1,46 @@
+name: "Mario's Coding Agent Resources"
+description: "Skills, commands, and agents for Jira, Google Workspace, code review, OpenShift, and more."
+version: "1.0.0"
+
+modules:
+  - name: jira-skills
+    description: "Manage Jira issues via the Atlassian CLI (acli)"
+    version: "0.1.0"
+    repository: "https://github.com/mvazquezc/coding-agents-resources.git"
+    path: "jira-skills"
+    tags: ["jira", "atlassian", "acli", "issue-tracking"]
+
+  - name: gws-skills
+    description: "Interact with Google Workspace via the gws CLI"
+    version: "0.1.0"
+    repository: "https://github.com/mvazquezc/coding-agents-resources.git"
+    path: "gws-skills"
+    tags: ["google", "gmail", "calendar", "docs", "gws"]
+
+  - name: custom-agents
+    description: "Multi-model code review orchestrator and convention-aware build agent"
+    version: "0.1.0"
+    repository: "https://github.com/mvazquezc/coding-agents-resources.git"
+    path: "custom-agents"
+    tags: ["code-review", "agents", "multi-model", "build"]
+
+  - name: coding-skills
+    description: "Karpathy coding guidelines and code simplifier skills"
+    version: "0.1.0"
+    repository: "https://github.com/mvazquezc/coding-agents-resources.git"
+    path: "coding-skills"
+    tags: ["karpathy", "code-quality", "simplifier", "methodology"]
+
+  - name: other-skills
+    description: "Mario Vazquez's technical writing style skill"
+    version: "0.1.0"
+    repository: "https://github.com/mvazquezc/coding-agents-resources.git"
+    path: "other-skills"
+    tags: ["writing", "style", "technical-writing", "linuxera"]
+
+  - name: ocp-operator-troubleshooting
+    description: "Troubleshoot OLM-managed operators on OpenShift 4.12+"
+    version: "0.1.0"
+    repository: "https://github.com/mvazquezc/coding-agents-resources.git"
+    path: "ocp-operator-troubleshooting"
+    tags: ["openshift", "operator", "olm", "troubleshooting", "must-gather"]

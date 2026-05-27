@@ -74,20 +74,42 @@ Three-phase diagnostic: OLM triage, workload triage, and deep source code analys
 
 Install [lola](https://github.com/LobsterTrap/lola):
 
-### Install a single module
+### Option 1: Install via marketplace (recommended)
+
+Register the marketplace once, then search and install modules by name:
 
 ```bash
-# Add the module from this repo
-lola mod add https://github.com/mvazquezc/coding-agents-resources.git#subdirectory=jira-skills
+# Register the marketplace (one-time)
+lola market add mario https://raw.githubusercontent.com/mvazquezc/coding-agents-resources/main/marketplace.yml
 
-# Install to your preferred assistant (project scope, current directory)
-lola install jira-skills -a opencode
-lola install jira-skills -a claude-code
-lola install jira-skills -a cursor
-lola install jira-skills -a gemini
+# Search for available modules
+lola mod search jira
+lola mod search openshift
+
+# Install a module
+lola install jira-skills -a opencode --scope user
+```
+
+### Option 2: Install directly from Git
+
+If you prefer not to register a marketplace, add modules directly:
+
+```bash
+lola mod add https://github.com/mvazquezc/coding-agents-resources.git#subdirectory=jira-skills
+lola install jira-skills -a opencode --scope user
 ```
 
 Replace `jira-skills` with any module name: `gws-skills`, `custom-agents`, `coding-skills`, `other-skills`, or `ocp-operator-troubleshooting`.
+
+### Option 3: Install from a local clone
+
+```bash
+git clone https://github.com/mvazquezc/coding-agents-resources.git
+cd coding-agents-resources
+
+lola mod add ./jira-skills
+lola install jira-skills -a opencode --scope user
+```
 
 ### Project vs user scope
 
@@ -105,29 +127,13 @@ lola install jira-skills -a opencode --scope user
 | Project | `--scope project` (default) | `.opencode/`, `AGENTS.md` in the project | `.claude/` in the project |
 | User | `--scope user` | `~/.config/opencode/` | `~/.claude/` |
 
-### Install multiple modules
-
-```bash
-for mod in jira-skills gws-skills custom-agents coding-skills other-skills ocp-operator-troubleshooting; do
-  lola mod add "https://github.com/mvazquezc/coding-agents-resources.git#subdirectory=$mod"
-  lola install "$mod" -a opencode --scope user
-done
-```
-
-### Install from a local clone
-
-```bash
-git clone https://github.com/mvazquezc/coding-agents-resources.git
-cd coding-agents-resources
-
-lola mod add ./jira-skills
-lola install jira-skills -a opencode --scope user
-```
-
 ### Update modules
 
 ```bash
+# Update a specific module from source
 lola mod update jira-skills
+
+# Regenerate installed assistant files
 lola update
 ```
 
