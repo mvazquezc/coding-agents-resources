@@ -1,7 +1,7 @@
 ---
 description: Code reviewer powered by Claude Sonnet. Invoked by the code-reviewer orchestrator.
 mode: subagent
-model: google-vertex-anthropic/claude-sonnet-4.6
+model: google-vertex/claude-sonnet-4.6
 temperature: 0.1
 hidden: true
 color: "#D97706"
