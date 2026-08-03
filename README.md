@@ -42,7 +42,7 @@ Methodology skills for writing better code.
 
 | Type | Contents |
 |------|----------|
-| Skills | `as-karpathy`, `code-simplifier` |
+| Skills | `as-karpathy`, `code-simplifier`, `interactive-architecture-diagram` |
 | Commands | `/as-karpathy`, `/code-simplifier` |
 
 ### other-skills

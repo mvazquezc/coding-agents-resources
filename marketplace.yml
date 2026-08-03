@@ -25,11 +25,11 @@ modules:
     tags: ["code-review", "agents", "multi-model", "build"]
 
   - name: coding-skills
-    description: "Karpathy coding guidelines and code simplifier skills"
-    version: "0.1.0"
+    description: "Karpathy coding guidelines, code simplifier, and interactive architecture diagram skills"
+    version: "0.2.0"
     repository: "https://github.com/mvazquezc/coding-agents-resources.git"
     path: "coding-skills"
-    tags: ["karpathy", "code-quality", "simplifier", "methodology"]
+    tags: ["karpathy", "code-quality", "simplifier", "methodology", "architecture-diagram", "html", "visualization"]
 
   - name: other-skills
     description: "Mario Vazquez's technical writing style skill"
